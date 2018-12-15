@@ -1,0 +1,28 @@
+{
+    "name": "widoz/project-tests-helper",
+    "description": "Helper Package that include various tests useful stuffs for my projects",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guido Scialfa",
+            "email": "dev@guidoscialfa.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "7.*",
+        "brain/monkey": "2.0.*",
+        "mockery/mockery": "1.0.*",
+        "phpunit/phpunit": "7.5.*",
+        "composer/composer": "^1.9@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProjectTestsHelper\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "ProjectTestsHelper\\PostInstallCmd::moveIncludeFiles"
+    }
+}
