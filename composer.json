@@ -25,6 +25,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "ProjectTestsHelper\\PostInstallCmd::moveIncludeFiles"
+        "post-package-install": "ProjectTestsHelper\\PostPackageInstall::moveIncludeFiles"
     }
 }

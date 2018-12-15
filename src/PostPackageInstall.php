@@ -14,7 +14,7 @@ namespace ProjectTestsHelper;
 
 use Composer\Script\Event;
 
-class PostInstallCmd
+class PostPackageInstall
 {
     const DIR_TESTS = 'tests';
     const DIR_UNIT_TESTS = self::DIR_TESTS . '/unit';
