@@ -1,6 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 // phpcs:disable
-$autoload = dirname(__DIR__, 2) . '/vendor/autoload.php';
+$autoload = dirname(__DIR__, 5) . '/vendor/autoload.php';
 if (!file_exists($autoload) || !is_readable($autoload)) {
     die('Autoloader is mandatory to run unit tests, the autoload.php file is not readable or does not exists.');
 }
