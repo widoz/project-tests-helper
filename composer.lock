@@ -4,8 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5db0a4fbc3eb509374266a9efa94785",
-    "packages": [
+    "content-hash": "84b9bd75b0be27bcd2c7bb44931d667a",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "antecedent/patchwork",
             "version": "2.1.8",
@@ -2545,7 +2546,6 @@
             "time": "2018-05-29T14:25:02+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
