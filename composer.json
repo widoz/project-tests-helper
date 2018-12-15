@@ -1,6 +1,6 @@
 {
     "name": "widoz/project-tests-helper",
-    "description": "Helper Package that include various tests useful stuffs for my projects",
+    "description": "Php Tests Helper library to include into your projects",
     "type": "library",
     "license": "MIT",
     "authors": [
