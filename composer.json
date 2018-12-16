@@ -20,6 +20,9 @@
         "composer/composer": "^1.9@dev"
     },
     "autoload": {
+        "classmap": [
+            "src/"
+        ],
         "psr-4": {
             "ProjectTestsHelper\\": "src/"
         }
