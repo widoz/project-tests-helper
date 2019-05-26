@@ -17,7 +17,7 @@ class TestCase extends PHPUnitFrameworkTestCase
     /**
      * SetUp
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         Monkey\setUp();
@@ -26,7 +26,7 @@ class TestCase extends PHPUnitFrameworkTestCase
     /**
      * TearDown
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
         Monkey\tearDown();
         Mockery::close();
