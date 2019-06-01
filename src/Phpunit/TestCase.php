@@ -41,23 +41,23 @@ class TestCase extends PHPUnitFrameworkTestCase
      * @param string $className
      * @param array $constructorArguments
      * @param array $methods
+     * @param string $sutMethod
      * @return MockBuilder
      */
     protected function buildTesteeMock(
         string $className,
         array $constructorArguments,
-        array $methods
+        array $methods,
+        string $sutMethod
     ): MockBuilder {
 
         $testee = $this->getMockBuilder($className);
-
         $constructorArguments
             ? $testee->setConstructorArgs($constructorArguments)
             : $testee->disableOriginalConstructor();
 
-        if ($methods) {
-            $testee->setMethods($methods);
-        }
+        $methods and $testee->setMethods($methods);
+        $sutMethod and $testee->setMethodsExcept([$sutMethod]);
 
         return $testee;
     }
