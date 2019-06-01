@@ -69,20 +69,25 @@ class TestCase extends PHPUnitFrameworkTestCase
      * @param string $className
      * @param array $constructorArguments
      * @param string $method
+     * @param array $methods
      * @return array
      * @throws ReflectionException
      */
-    public function buildTesteeMethodMock(
+    protected function buildTesteeMethodMock(
         string $className,
         array $constructorArguments,
-        string $method
+        string $method,
+        array $methods
     ): array {
 
-        $testee = $this->buildTesteeMock($className, $constructorArguments, [])->getMock();
-
+        $testee = $this->buildTesteeMock(
+            $className,
+            $constructorArguments,
+            $methods,
+            ''
+        )->getMock();
         $reflectionMethod = new ReflectionMethod($className, $method);
         $reflectionMethod->setAccessible(true);
-
         return [
             $testee,
             $reflectionMethod,
