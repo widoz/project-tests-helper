@@ -4,16 +4,15 @@ namespace ProjectTestsHelper\Phpunit;
 
 use Brain\Monkey;
 use Mockery;
-use PHPUnit\Framework\MockObject\MockBuilder;
-use \PHPUnit\Framework\TestCase as PHPUnitFrameworkTestCase;
-use ReflectionException;
-use ReflectionMethod;
+use \PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
 /**
  * Class TestCase
  */
-class TestCase extends PHPUnitFrameworkTestCase
+class TestCase extends PHPUnitTestCase
 {
+    use MockerTrait;
+
     /**
      * SetUp
      */
@@ -31,66 +30,5 @@ class TestCase extends PHPUnitFrameworkTestCase
         Monkey\tearDown();
         Mockery::close();
         parent::tearDown();
-    }
-
-    /**
-     * Build the Testee Mock Object
-     *
-     * Basic configuration available for all of the testee objects, call `getMock` to get the mock.
-     *
-     * @param string $className
-     * @param array $constructorArguments
-     * @param array $methods
-     * @param string $sutMethod
-     * @return MockBuilder
-     */
-    protected function buildTesteeMock(
-        string $className,
-        array $constructorArguments,
-        array $methods,
-        string $sutMethod
-    ): MockBuilder {
-
-        $testee = $this->getMockBuilder($className);
-        $constructorArguments
-            ? $testee->setConstructorArgs($constructorArguments)
-            : $testee->disableOriginalConstructor();
-
-        $methods and $testee->setMethods($methods);
-        $sutMethod and $testee->setMethodsExcept([$sutMethod]);
-
-        return $testee;
-    }
-
-    /**
-     * Retrieve a Testee Mock to Test Protected Methods
-     *
-     * return MockBuilder
-     * @param string $className
-     * @param array $constructorArguments
-     * @param string $method
-     * @param array $methods
-     * @return array
-     * @throws ReflectionException
-     */
-    protected function buildTesteeMethodMock(
-        string $className,
-        array $constructorArguments,
-        string $method,
-        array $methods
-    ): array {
-
-        $testee = $this->buildTesteeMock(
-            $className,
-            $constructorArguments,
-            $methods,
-            ''
-        )->getMock();
-        $reflectionMethod = new ReflectionMethod($className, $method);
-        $reflectionMethod->setAccessible(true);
-        return [
-            $testee,
-            $reflectionMethod,
-        ];
     }
 }
