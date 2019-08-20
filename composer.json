@@ -16,7 +16,7 @@
     "require-dev": {
         "brain/monkey": "2.0.*",
         "mockery/mockery": "1.0.*",
-        "phpunit/phpunit": "7.5.*",
+        "phpunit/phpunit": "^6",
         "composer/composer": "^1.9@dev"
     },
     "autoload": {
