@@ -11,12 +11,11 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": ">=7.1"
+    "php": ">=7.1",
+    "phpunit/phpunit": "^7",
+    "brain/monkey": "2.0.*"
   },
   "require-dev": {
-    "brain/monkey": "2.0.*",
-    "mockery/mockery": "1.0.*",
-    "phpunit/phpunit": "^7",
     "composer/composer": "^1.9@dev",
     "inpsyde/php-coding-standards": "^0.13.0@dev"
   },
