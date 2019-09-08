@@ -11,12 +11,12 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": ">=7.0"
+    "php": ">=7.1"
   },
   "require-dev": {
     "brain/monkey": "2.0.*",
     "mockery/mockery": "1.0.*",
-    "phpunit/phpunit": "^6",
+    "phpunit/phpunit": "^7",
     "composer/composer": "^1.9@dev",
     "inpsyde/php-coding-standards": "^0.13.0@dev"
   },
@@ -28,9 +28,9 @@
       "ProjectTestsHelper\\": "src/"
     }
   },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
+  "config": {
+    "platform": {
+      "php": "7.1"
     }
   }
 }
