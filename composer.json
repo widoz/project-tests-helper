@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.3"
+        "php": ">=7.2"
     },
     "require-dev": {
         "brain/monkey": "2.0.*",
@@ -28,9 +28,9 @@
             "ProjectTestsHelper\\": "src/"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0.x-dev"
-        }
+    "config": {
+      "platform": {
+        "php": "7.2"
+      }
     }
 }
