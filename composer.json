@@ -11,8 +11,8 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": ">=7.1",
-    "phpunit/phpunit": "^7",
+    "php": ">=7.0",
+    "phpunit/phpunit": "^6",
     "brain/monkey": "~2.3"
   },
   "require-dev": {
@@ -29,7 +29,7 @@
   },
   "config": {
     "platform": {
-      "php": "7.1"
+      "php": "7.0"
     }
   }
 }
