@@ -3,6 +3,7 @@
 namespace ProjectTestsHelper\Phpunit;
 
 use Brain\Monkey;
+use Faker\Factory;
 use Mockery;
 use \PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
@@ -12,6 +13,11 @@ use \PHPUnit\Framework\TestCase as PHPUnitTestCase;
 class TestCase extends PHPUnitTestCase
 {
     use MockerTrait;
+
+    /**
+     * @var Factory
+     */
+    protected $faker;
 
     /**
      * SetUp
@@ -30,5 +36,20 @@ class TestCase extends PHPUnitTestCase
         Monkey\tearDown();
         Mockery::close();
         parent::tearDown();
+    }
+
+    /**
+     * Create Faker instance
+     *
+     * @return void
+     */
+    protected function setupFaker()
+    {
+        if ($this->faker) {
+            return;
+        }
+
+        $fakeFactory = new Factory();
+        $this->faker = $fakeFactory->create();
     }
 }
