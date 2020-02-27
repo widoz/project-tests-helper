@@ -13,7 +13,8 @@
   "require": {
     "php": ">=7.1",
     "phpunit/phpunit": "^7",
-    "brain/monkey": "~2.3"
+    "brain/monkey": "~2.3",
+    "fzaninotto/faker": "^1.9@dev"
   },
   "require-dev": {
     "composer/composer": "^1.9@dev",
