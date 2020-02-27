@@ -2,7 +2,7 @@
 <ruleset name="Project Tests Helper">
     <description>Project Tests Helper Coding Standard</description>
 
-    <config name="testVersion" value="7.1-"/>
+    <config name="testVersion" value="7.0-"/>
     <config name="ignore_warnings_on_exit" value="1"/>
 
     <file>./src</file>
