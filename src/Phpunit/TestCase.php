@@ -26,6 +26,8 @@ class TestCase extends PHPUnitTestCase
     {
         parent::setUp();
         Monkey\setUp();
+
+        $this->setupFaker();
     }
 
     /**
