@@ -4,6 +4,7 @@ namespace ProjectTestsHelper\Phpunit;
 
 use Brain\Monkey;
 use Faker\Factory;
+use Faker\Generator;
 use Mockery;
 use \PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
@@ -15,7 +16,7 @@ class TestCase extends PHPUnitTestCase
     use MockerTrait;
 
     /**
-     * @var Factory
+     * @var Generator
      */
     protected $faker;
 
